@@ -10,6 +10,9 @@ python = "^3.12"
 fastapi = "^0.114.0"
 uvicorn = "^0.30.6"
 invoke = "^2.2.0"
+sqlalchemy = "^2.0.34"
+pydantic = "^2.9.1"
+mypysql = "^0.1.7"
 
 
 [build-system]
