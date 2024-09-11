@@ -26,7 +26,7 @@ class ImageLog(Base):
     image_path: str = Column(String(255))
     success: int = Column(Integer)
     message: str = Column(String(255))
-    class_: int = Column(Integer)
+    class_: int = Column("class", Integer)
     confidence: float = Column(DECIMAL)
     request_timestamp: datetime = Column(DATETIME)
     response_timestamp: datetime = Column(DATETIME)
