@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 def search(db: Session, image: Image):
     try:
-        response = requests.post("{url}".format(url=config.MOCK_API_URL))
+        response = requests.post("{url}".format(url=config.MOCK_API_URL), data={"image_path": image.path})
     except requests.exceptions.RequestException as err:
         print(err)
         return
