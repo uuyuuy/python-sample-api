@@ -13,3 +13,5 @@ def search(db: Session, image: Image):
 
     res = ImageResponse(**response.json())
     save(db, image, res)
+
+    return res

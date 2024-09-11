@@ -8,5 +8,5 @@ router = APIRouter()
 
 @router.post("/")
 def search_image_class(image: Image, db: Session = Depends(get_session)):
-    search(db, image)
-    return ""
+    res = search(db, image)
+    return {"result": res.success}
