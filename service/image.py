@@ -4,6 +4,7 @@ import config
 from repository.image import save
 from sqlalchemy.orm import Session
 
+
 def search(db: Session, image: Image):
     try:
         response = requests.post("{url}".format(url=config.MOCK_API_URL))

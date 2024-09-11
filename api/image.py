@@ -6,6 +6,7 @@ from repository.init import get_session
 
 router = APIRouter()
 
+
 @router.post("/")
 def search_image_class(image: Image, db: Session = Depends(get_session)):
     res = search(db, image)
