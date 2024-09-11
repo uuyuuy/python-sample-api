@@ -4,13 +4,14 @@ from sqlalchemy.types import Integer, String
 from sqlalchemy.dialects.mysql import DATETIME, DECIMAL
 from sqlalchemy.ext.declarative import declarative_base
 import datetime
+from typing import Optional
 
 class Image(BaseModel):
     path: str
 
 class EstimatedData(BaseModel):
-    class_: int = Field(alias="class")
-    confidence: float
+    class_: Optional[int] = Field(alias="class", default=None)
+    confidence: Optional[float] = None
 
 class ImageResponse(BaseModel):
     success: bool
